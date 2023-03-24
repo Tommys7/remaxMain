@@ -1,0 +1,439 @@
+@font-face {
+  font-family: "Barlow Regular";
+  src: url("../fonts/Barlow-Regular.eot");
+  src: url("../fonts/Barlow-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Barlow-Regular.woff") format("woff"), url("../fonts/Barlow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow Bold";
+  src: url("../fonts/Barlow-SemiBold.eot");
+  src: url("../fonts/Barlow-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Barlow-SemiBold.woff") format("woff"), url("../fonts/Barlow-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Regular", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1780px;
+  margin: auto;
+  width: 96%;
+}
+
+.container-tight {
+  max-width: 1400px;
+  width: 96%;
+  margin: auto;
+}
+
+button {
+  background-color: #ffbd17;
+  border: none;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  transition: 0.3s;
+  background-color: #e3a200;
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  transition: 0.2s;
+}
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  display: flex;
+}
+.header-logo__img {
+  margin-right: 20px;
+}
+.header-logo__img img {
+  width: 100px;
+}
+.header-logo__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+}
+.header-link {
+  text-decoration: none;
+  color: #000;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 25px;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.header-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: -5px;
+  transition: 0.5s;
+}
+.header-link:hover {
+  color: #FBBF24;
+}
+.header-link:hover::after {
+  background-color: #FBBF24;
+  width: 100%;
+}
+
+.header-bg {
+  background: url(../img/header-photo.jpg);
+  position: absolute;
+}
+
+.logo-name__reg {
+  display: block;
+  font-size: 26px;
+}
+
+.logo-name__bold {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.shrink {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.main {
+  padding-top: 400px;
+  padding-bottom: 445px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/mainImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position-x: center;
+  background-position-y: -100px;
+  z-index: 5;
+}
+.main-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-title {
+  font-size: 40px;
+  color: #fff;
+}
+.main-button {
+  color: #fff;
+}
+
+.about {
+  margin-bottom: 200px;
+}
+.about-wrap {
+  display: flex;
+  gap: 40px;
+}
+
+.about-text {
+  width: 50%;
+}
+.about-text__title {
+  font-size: 45px;
+}
+.about-text__text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.about-img {
+  width: 50%;
+  margin-top: 150px;
+}
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(255, 189, 23, 0.1);
+}
+
+.about-text__disposition {
+  margin-bottom: 20px;
+}
+.about-text__dispositionTop {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #ffbd17;
+}
+.about-text__dispositionBottom {
+  font-size: 36px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+}
+
+.about-text__usableAreaTop {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #ffbd17;
+}
+.about-text__usableAreaBottom {
+  margin: 0;
+  font-size: 36px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+}
+
+.parameters {
+  position: relative;
+  margin-bottom: 1200px;
+}
+
+.parameters-bg {
+  width: 70%;
+  position: absolute;
+}
+.parameters-bg img {
+  width: 100%;
+}
+
+.parameters-text {
+  padding: 80px;
+  background: #fcfcfc;
+  width: 40%;
+  top: 600px;
+  position: absolute;
+  right: 252px;
+  border-radius: 3px;
+  box-shadow: 5px 10px 10px 5px #e6e6e6;
+}
+
+.parameters-text__title {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+}
+.parameters-text__subtitle {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+}
+.parameters-text__attribute1 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.parameters-text__attribute2 {
+  margin: 0;
+}
+
+.standarts {
+  padding-top: 100px;
+  background: #fafafa;
+  padding-bottom: 100px;
+}
+
+.standarts-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.standarts-card {
+  text-align: center;
+  background: #fff;
+  padding: 30px 20px;
+  width: 30%;
+  box-shadow: 0px 5px 5px 5px #f5f5f5;
+}
+
+.standarts-card__title {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  color: #ffbd17;
+  font-size: 22px;
+}
+
+.standards__button {
+  background: #fff;
+  border: 2px solid #ffbd17;
+}
+.standards__button:hover {
+  background-color: #fff7e3;
+}
+
+.actual-wrap {
+  display: flex;
+}
+
+.actual-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.actual-text__block {
+  display: flex;
+}
+
+.actual-title {
+  font-size: 48px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  color: #ffbd17;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.actual-text__blockFreeNumber, .actual-text__blockSoldNumber {
+  font-size: 30px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  margin-right: 150px;
+  margin-bottom: 20px;
+}
+
+.actual-text__blockFreeText, .actual-text__blockSoldText {
+  font-size: 20px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  color: #ffbd17;
+  margin: 0;
+}
+
+.actual-img {
+  width: 50%;
+}
+.actual-img img {
+  width: 100%;
+  height: 100.01%;
+}
+
+.location-wrap {
+  display: flex;
+}
+
+.location-text {
+  width: 50%;
+  padding: 50px;
+}
+
+.location-img {
+  width: 50%;
+}
+.location-img img {
+  width: 100%;
+}
+
+.location-title {
+  margin-bottom: 60px;
+  font-size: 48px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  color: #ffbd17;
+}
+
+.location-text {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 70px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.footer-exclusive {
+  font-size: 25px;
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  color: #ffbd17;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+.footer-sellerName {
+  margin: 0;
+  margin-bottom: 8px;
+  color: #6b6b6b;
+}
+
+.footer {
+  padding-top: 150px;
+  margin-bottom: 100px;
+}
+.footer a {
+  text-decoration: none;
+  color: #6b6b6b;
+  display: block;
+  margin-bottom: 8px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-form {
+  width: 40%;
+}
+
+.footer-form__title {
+  font-size: 55px;
+  color: #ffbd17;
+  margin: 0;
+  margin-bottom: 65px;
+}
+
+.footer-input {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  color: #ffbd17;
+  padding: 5px 5px 7px 5px;
+  border: none;
+  position: relative;
+  border: 1px solid #ffbd17;
+  border-radius: 4px;
+}
+
+.footer-form__button {
+  color: #fff;
+  padding: 20px 50px;
+}/*# sourceMappingURL=style.css.map */

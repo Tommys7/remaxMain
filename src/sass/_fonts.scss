@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Barlow Regular';
+    src: url('../fonts/Barlow-Regular.eot');
+    src: url('../fonts/Barlow-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Barlow-Regular.woff') format('woff'),
+    url('../fonts/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Barlow Bold';
+    src: url('../fonts/Barlow-SemiBold.eot');
+    src: url('../fonts/Barlow-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Barlow-SemiBold.woff') format('woff'),
+    url('../fonts/Barlow-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    
+@mixin reg {
+    font-family: 'Barlow Regular', sans-serif;
+    font-weight: 300;
+}
+
+@mixin bold {
+    font-family: 'Barlow Bold', sans-serif;
+    font-weight: 700;
+}
