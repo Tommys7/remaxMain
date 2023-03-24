@@ -54,7 +54,7 @@ button:hover {
   position: fixed;
   width: 100%;
   z-index: 999999;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .header-wrap {
   display: flex;
@@ -144,7 +144,7 @@ button:hover {
   flex-direction: column;
 }
 .main-title {
-  font-size: 40px;
+  font-size: 20px;
   color: #fff;
 }
 .main-button {

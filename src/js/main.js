@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+    new WOW().init();
 
     $(document).on("scroll", function(){
         if
